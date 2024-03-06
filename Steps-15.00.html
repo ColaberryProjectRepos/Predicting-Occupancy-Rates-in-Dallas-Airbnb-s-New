@@ -1,0 +1,494 @@
+
+Creating DAX Measures
+15
+<p><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1463/14/1.jpg" style="width: 50%;"></p><p class="MsoNormal"><span style="font-size:14.0pt;line-height:115%">Creating the
+necessary measures<o:p></o:p></span></p><p class="MsoListParagraphCxSpFirst" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">1.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">Click on FinalFabricFile table and
+select New Measure<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">2.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">Start writing the DAX formula (all
+the formulas are at the bottom) or copy and paste one by one.<o:p></o:p></span></p><p class="MsoListParagraphCxSpMiddle" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">3.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">After you done click on the green
+right mark so it will be saved.<o:p></o:p></span></p><p class="MsoListParagraphCxSpLast" style="text-indent:-.25in;mso-list:l0 level1 lfo1"><!--[if !supportLists]--><span style="font-size:14.0pt;line-height:115%;mso-bidi-font-family:Calibri;
+mso-bidi-theme-font:minor-latin">4.<span style="font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-kerning: auto; font-optical-sizing: auto; font-feature-settings: normal; font-variation-settings: normal; font-variant-position: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size:14.0pt;line-height:115%">Repeat the steps until all the
+measures are created.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.TotalProperty = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">COUNTROWS</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">VALUES</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">FinalFabricFile[id_x]</span><span style="font-size: 9pt; font-family: Consolas;">))<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.AvgPricePerNight = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">AVERAGE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">'FinalFabricFile'[price_x]</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.OccupRate = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">AVERAGEX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">FinalFabricFile</span><span style="font-size: 9pt; font-family: Consolas;">,(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">365</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#001080;mso-font-kerning:0pt;mso-ligatures:none">FinalFabricFile[availability_365_x]</span><span style="font-size: 9pt; font-family: Consolas;">) / </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">365</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.Property YOY = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">MAX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">) <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYearProperty</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.TotalProperty]</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">1</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYearproperty</span><span style="font-size: 9pt; font-family: Consolas;"> = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.TotalProperty]</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">FILTER</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">ALL</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">), &nbsp;</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:green;mso-font-kerning:0pt;
+mso-ligatures:none">-- Remove any date filters for accurate comparison</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">IF</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">ISBLANK</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearproperty</span><span style="font-size: 9pt; font-family: Consolas;">),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">BLANK</span><span style="font-size: 9pt; font-family: Consolas;">(), &nbsp;</span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:green;mso-font-kerning:0pt;mso-ligatures:none">-- Return a blank if no
+data for the previous year</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">CurrentYearProperty</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearproperty</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearproperty</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.Avg price YOY = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">MAX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">) <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYearAvgPrice</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.AvgPricePerNight]</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">1</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYearAvgPrice</span><span style="font-size: 9pt; font-family: Consolas;"> = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.AvgPricePerNight]</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">FILTER</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">ALL</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">), &nbsp;</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:green;mso-font-kerning:0pt;
+mso-ligatures:none">-- Remove any date filters for accurate comparison</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">IF</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">ISBLANK</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearAvgPrice</span><span style="font-size: 9pt; font-family: Consolas;">),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">BLANK</span><span style="font-size: 9pt; font-family: Consolas;">(), &nbsp;</span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:green;mso-font-kerning:0pt;mso-ligatures:none">-- Return a blank if no
+data for the previous year</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">CurrentYearAvgPrice</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearAvgPrice</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearAvgPrice</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.OccupancyRateYOY = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">MAX</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">) <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYearOccupancyRate</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.OccupRate]</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">CurrentYear</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">1</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">VAR</span><span style="font-size: 9pt; font-family: Consolas;"> </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYearOccupancyRate</span><span style="font-size: 9pt; font-family: Consolas;"> = <o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">CALCULATE</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.OccupRate]</span><span style="font-size: 9pt; font-family: Consolas;">,<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">FILTER</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">ALL</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;">), &nbsp;</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:green;mso-font-kerning:0pt;
+mso-ligatures:none">-- Remove any date filters for accurate comparison</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">'CalendarTable'[Date]</span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;mso-ligatures:none">.</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#001080;mso-font-kerning:0pt;
+mso-ligatures:none">[Year]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:teal;mso-font-kerning:0pt;
+mso-ligatures:none">PrvYear</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; &nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; )<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:blue;mso-font-kerning:0pt;
+mso-ligatures:none">RETURN</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">IF</span><span style="font-size: 9pt; font-family: Consolas;">(<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">ISBLANK</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearOccupancyRate</span><span style="font-size: 9pt; font-family: Consolas;">),<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">BLANK</span><span style="font-size: 9pt; font-family: Consolas;">(), &nbsp;</span><span style="font-size:9.0pt;font-family:
+Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:green;mso-font-kerning:0pt;mso-ligatures:none">-- Return a blank if no
+data for the previous year</span><span style="font-size: 9pt; font-family: Consolas;"><o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp; &nbsp; </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">DIVIDE</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">CurrentYearOccupancyRate</span><span style="font-size: 9pt; font-family: Consolas;"> - </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearOccupancyRate</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:teal;mso-font-kerning:0pt;mso-ligatures:none">PrvYearOccupancyRate</span><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">)<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.ArrowPropertyYoY% = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">SWITCH</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">TRUE</span><span style="font-size: 9pt; font-family: Consolas;">(),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Property YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> &lt; </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Property YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9652</span><span style="font-size: 9pt; font-family: Consolas;">))<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.ArrowAvgPriceYoY% = </span><span style="font-size:9.0pt;
+font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:
+&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">SWITCH</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">TRUE</span><span style="font-size: 9pt; font-family: Consolas;">(),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Avg price YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> &lt; </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#68349C;mso-font-kerning:0pt;mso-ligatures:none">[.Avg price YOY]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#3165BB;mso-font-kerning:0pt;mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;
+mso-fareast-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;;
+color:#098658;mso-font-kerning:0pt;mso-ligatures:none">9652</span><span style="font-size: 9pt; font-family: Consolas;">))<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">&nbsp;</span></p><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;">.ArrowOccupancyRateYoY% = </span><span style="font-size:
+9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">SWITCH</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">TRUE</span><span style="font-size: 9pt; font-family: Consolas;">(),</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.OccupancyRateYOY]</span><span style="font-size: 9pt; font-family: Consolas;"> &lt; </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#68349C;mso-font-kerning:0pt;
+mso-ligatures:none">[.OccupancyRateYOY]</span><span style="font-size: 9pt; font-family: Consolas;"> = </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">0</span><span style="font-size: 9pt; font-family: Consolas;">, </span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">9662</span><span style="font-size: 9pt; font-family: Consolas;">),</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#3165BB;mso-font-kerning:0pt;
+mso-ligatures:none">UNICHAR</span><span style="font-size: 9pt; font-family: Consolas;">(</span><span style="font-size:9.0pt;font-family:Consolas;mso-fareast-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:&quot;Times New Roman&quot;;color:#098658;mso-font-kerning:0pt;
+mso-ligatures:none">9652</span><span style="font-size: 9pt; font-family: Consolas;">))</span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><span style="font-size: 9pt; font-family: Consolas;"><o:p><br></o:p></span></p><p class="MsoNormal" style="margin-bottom: 0in; line-height: 13.5pt; background-image: initial; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;"><img src="https://app.colaberry.com/uploads/ProjectStepsImages/1463/14/2.gif" style="width: 50%;"><span style="font-size: 9pt; font-family: Consolas;"><o:p><br></o:p></span></p>
+
+<p><a href="https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-tutorial-create-measures" target="_blank">Creating Measures</a><br></p>
+
